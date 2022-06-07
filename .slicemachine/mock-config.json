@@ -1,0 +1,43 @@
+{
+  "_cts": {
+    "home": {},
+    "about": {
+      "aboutDescription": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "aboutServices": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "aboutContact": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "aboutSocial": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "homepage": {}
+  },
+  "slices": {
+    "SlideShow": {
+      "default": {
+        "items": {
+          "slide": {
+            "content": "https://images.unsplash.com/photo-1539418561314-565804e349c0"
+          }
+        }
+      }
+    }
+  }
+}

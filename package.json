@@ -1,0 +1,38 @@
+{
+  "name": "ale-molent",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:next:dev\" \"npm:slicemachine\" --names \"next,slicemachine\" ",
+    "next:dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@prismicio/client": "^6.4.3",
+    "@prismicio/helpers": "^2.3.0",
+    "@prismicio/next": "^0.1.2",
+    "@prismicio/react": "^2.3.0",
+    "@prismicio/richtext": "^2.0.1",
+    "@prismicio/slice-simulator-react": "^0.2.2",
+    "next": "12.1.4",
+    "prismic": "0.0.1",
+    "react": "18.0.0",
+    "react-device-detect": "^2.2.2",
+    "react-dom": "18.0.0",
+    "react-responsive": "^9.0.0-beta.6",
+    "sass": "^1.50.0"
+  },
+  "devDependencies": {
+    "swiper": "^8.1.0",
+    "autoprefixer": "^10.4.4",
+    "eslint": "8.13.0",
+    "eslint-config-next": "12.1.4",
+    "postcss": "^8.4.12",
+    "prettier": "^2.6.2",
+    "slice-machine-ui": "^0.3.7"
+  }
+}

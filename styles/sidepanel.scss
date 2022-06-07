@@ -1,0 +1,23 @@
+.sidepanel{
+  position: fixed;
+  height: 100vh;
+  width:100%;
+  top:0;
+  left: 0;
+  background: white;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s ease;
+  &.open{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.sidepanel__wrapper{
+  padding: 20px;
+  margin-top: 85px;
+  display: flex;
+  justify-content: flex-end;
+}

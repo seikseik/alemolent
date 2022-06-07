@@ -1,0 +1,74 @@
+{
+  "id": "about",
+  "label": "about",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      },
+      "aboutDescription": {
+        "type": "StructuredText",
+        "config": {
+          "label": "About Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "servicesTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Services Title",
+          "placeholder": ""
+        }
+      },
+      "aboutServices": {
+        "type": "StructuredText",
+        "config": {
+          "label": "About Services",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "contactTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Contact Title",
+          "placeholder": ""
+        }
+      },
+      "aboutContact": {
+        "type": "StructuredText",
+        "config": {
+          "label": "About Contact",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "socialTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Social Title",
+          "placeholder": ""
+        }
+      },
+      "aboutSocial": {
+        "type": "StructuredText",
+        "config": {
+          "label": "About Social",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
+    }
+  }
+}

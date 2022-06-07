@@ -1,0 +1,35 @@
+{
+  "id": "home",
+  "label": "home",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
+          "placeholder": ""
+        }
+      },
+      "headerDescription": {
+        "type": "Text",
+        "config": {
+          "label": "Header Description",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "slide_show": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

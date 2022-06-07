@@ -1,0 +1,38 @@
+{
+  "id": "874134d4-ac2f-40e1-ac7c-fdd666049692",
+  "uid": "cupiditate-sunt-tenetur",
+  "type": "about",
+  "data": {
+    "aboutDescription": [
+      {
+        "type": "paragraph",
+        "text": "Veniam mollit officia laboris duis mollit sunt.",
+        "spans": []
+      }
+    ],
+    "servicesTitle": "transform user-centric bandwidth",
+    "aboutServices": [
+      {
+        "type": "paragraph",
+        "text": "Nulla dolore et proident est in quis veniam esse et consectetur est non aliquip consectetur culpa. Occaecat incididunt sit velit in labore do ullamco exercitation. Amet excepteur amet nulla id veniam proident qui ullamco ex.",
+        "spans": []
+      }
+    ],
+    "contactTitle": "leverage magnetic niches",
+    "aboutContact": [
+      {
+        "type": "paragraph",
+        "text": "Esse mollit aute nostrud cupidatat Lorem amet voluptate ullamco velit.",
+        "spans": []
+      }
+    ],
+    "socialTitle": "whiteboard transparent channels",
+    "aboutSocial": [
+      {
+        "type": "paragraph",
+        "text": "Nostrud ad incididunt culpa ut dolor ea aliquip aute occaecat dolor ut.",
+        "spans": []
+      }
+    ]
+  }
+}
