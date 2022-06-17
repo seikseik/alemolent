@@ -34,6 +34,7 @@ export default function Slideshow({slice}) {
        navigation
        pagination={{ clickable: true }}
        effect='fade'
+       speed={600}
        loop
      >
       {items.map((slide, index) => {
