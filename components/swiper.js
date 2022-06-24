@@ -30,13 +30,15 @@ export default function Slideshow({slice}) {
   console.log(slice);
 
   const slides =   items.map((slide, index) => {
+    console.log(slide.SlideMobile.url)
           if(isTabletOrMobile){
+
               return (
                 <SwiperSlide key={index}>
-                    <div className="image-container">
-                      {slide.slideMobile.url ? (  <img src={slide.slideMobile.url} layout="intrinsic"/>) : (
-                        <video src={slide.videoMobile.url}  width="100%" height="100%" autoPlay muted playsinline />
-                      )}
+                    <div className="image-container mobile_cont">
+                        {slide.SlideMobile.url ? (  <img src={slide.SlideMobile.url} layout="intrinsic"/>) : (
+                          <video src={slide.videoMobile.url}  width="100%" height="100%" autoPlay muted playsInline />
+                        )}
                         {prismicH.isFilled.richText(slide.slideCaption) && (
                         <div className="slide-caption">
                           <PrismicRichText field={slide.slideCaption} />
@@ -48,11 +50,10 @@ export default function Slideshow({slice}) {
           }else{
               return (
                 <SwiperSlide key={index}>
-                    <div className="image-container">
+                    <div className="image-container dekst_cont">
                       {slide.slide.url ? (  <img src={slide.slide.url} layout="intrinsic"/>) : (
-                        <video src={slide.video.url}  width="100%" height="100%" autoPlay muted playsinline />
+                        <video src={slide.video.url}  width="100%" height="100%" autoPlay muted playsInline />
                       )}
-                      <img src={slide.slide.url} layout="intrinsic"/>
                       {prismicH.isFilled.richText(slide.slideCaption) && (
                       <div className="slide-caption">
                         <PrismicRichText field={slide.slideCaption} />
