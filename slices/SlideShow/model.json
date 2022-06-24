@@ -45,11 +45,29 @@
             "thumbnails": []
           }
         },
-        "slide-caption": {
-          "type": "Text",
+        "slideCaption": {
+          "type": "StructuredText",
           "config": {
             "label": "Slide Caption",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "video": {
+          "type": "Link",
+          "config": {
+            "label": "Video",
+            "placeholder": "",
+            "select": "media"
+          }
+        },
+        "videoMobile": {
+          "type": "Link",
+          "config": {
+            "label": "Video Mobile",
+            "placeholder": "",
+            "select": "media"
           }
         }
       },

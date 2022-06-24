@@ -35,6 +35,12 @@
         "items": {
           "slide": {
             "content": "https://images.unsplash.com/photo-1539418561314-565804e349c0"
+          },
+          "slideCaption": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         }
       }

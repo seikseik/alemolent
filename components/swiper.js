@@ -6,6 +6,9 @@ import { Navigation, Pagination, Scrollbar, A11y, EffectFade } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useSwiper } from 'swiper/react';
 
+import { PrismicRichText } from "@prismicio/react";
+import * as prismicH from '@prismicio/helpers'
+
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -24,7 +27,44 @@ export default function Slideshow({slice}) {
 
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
-  console.log(isTabletOrMobile);
+  console.log(slice);
+
+  const slides =   items.map((slide, index) => {
+          if(isTabletOrMobile){
+              return (
+                <SwiperSlide key={index}>
+                    <div className="image-container">
+                      {slide.slideMobile.url ? (  <img src={slide.slideMobile.url} layout="intrinsic"/>) : (
+                        <video src={slide.videoMobile.url}  width="100%" height="100%" autoPlay muted playsinline />
+                      )}
+                        {prismicH.isFilled.richText(slide.slideCaption) && (
+                        <div className="slide-caption">
+                          <PrismicRichText field={slide.slideCaption} />
+                        </div>
+                         )}
+                  </div>
+                </SwiperSlide>
+              )
+          }else{
+              return (
+                <SwiperSlide key={index}>
+                    <div className="image-container">
+                      {slide.slide.url ? (  <img src={slide.slide.url} layout="intrinsic"/>) : (
+                        <video src={slide.video.url}  width="100%" height="100%" autoPlay muted playsinline />
+                      )}
+                      <img src={slide.slide.url} layout="intrinsic"/>
+                      {prismicH.isFilled.richText(slide.slideCaption) && (
+                      <div className="slide-caption">
+                        <PrismicRichText field={slide.slideCaption} />
+                      </div>
+                       )}
+                  </div>
+                </SwiperSlide>
+              )
+
+          }
+        }
+      )
 
   return (
     <div className="swiper__container">
@@ -37,28 +77,8 @@ export default function Slideshow({slice}) {
        speed={600}
        loop
      >
-      {items.map((slide, index) => {
-        if(isTabletOrMobile){
-          return (
-            <SwiperSlide key={index}>
-                <div className="image-container">
-                  <img  src={slide.SlideMobile.url} layout="intrinsic"/>
-                  <div className="slide-caption">{slide['slide-caption']}</div>
-              </div>
-            </SwiperSlide>
-          )
-        }else{
-          return (
-            <SwiperSlide key={index}>
-                <div className="image-container">
-                  <img src={slide.slide.url} layout="intrinsic"/>
-                  <div className="slide-caption">{slide['slide-caption']}</div>
-              </div>
-            </SwiperSlide>
-          )
-        }
-      }
-    )}
+
+      {slides}
 
      </Swiper>
     </div>

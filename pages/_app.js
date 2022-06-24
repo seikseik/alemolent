@@ -8,7 +8,6 @@ import "../styles/globals.scss";
 
 
 
-
 const richTextComponents = {
   paragraph: ({ children }) => <p className="mb-7 last:mb-0">{children}</p>,
   oList: ({ children }) => (
