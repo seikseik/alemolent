@@ -30,9 +30,7 @@ export default function Slideshow({slice}) {
   console.log(slice);
 
   const slides =   items.map((slide, index) => {
-    console.log(slide.SlideMobile.url)
           if(isTabletOrMobile){
-
               return (
                 <SwiperSlide key={index}>
                     <div className="image-container mobile_cont">
