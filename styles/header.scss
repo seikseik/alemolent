@@ -51,8 +51,13 @@ header{
   .header__wrapper{
     justify-content: space-between;
     position: relative;
+    height: unset;
+    padding: 20px;
   }
 
+  .sidepanel__wrapper{
+    margin-top: 75px;
+  }
   .header__wrapper .header__logo{
     width: auto;
   }

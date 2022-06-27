@@ -21,15 +21,13 @@
   }
 }
 
-@media screen and (max-width: 768px){
-  .swiper{
-    min-height: -webkit-fill-available;
-  }
-}
+
 
 .image-container{
   height: 100%;
 }
+
+
 
 .swiper-button-prev{
   position: absolute !important;
@@ -69,4 +67,14 @@
   font-size: 14px;
   color:white;
   mix-blend-mode: difference;
+}
+
+
+@media screen and (max-width: 768px){
+  .swiper{
+    min-height: -webkit-fill-available;
+  }
+  .slide-caption{
+    bottom:20px;
+  }
 }
