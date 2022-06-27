@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PrismicLink, PrismicText } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 
-const Header = ({toggleAbout, open, description}) => {
+const Header = ({toggleAbout, open, description, forwardedRef}) => {
 
   return (
     <header className="header">
@@ -32,7 +32,7 @@ const Header = ({toggleAbout, open, description}) => {
 
 
         <div className="header__description desktop">
-          <p>{description}</p>
+          <p ref={forwardedRef}>{description}</p>
         </div>
       </div>
     </header>

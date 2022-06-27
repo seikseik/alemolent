@@ -18,7 +18,7 @@ import 'swiper/css/effect-fade';
 export default function Slideshow({slice}) {
   const { items } = slice
 
-  const [swipe, setSwiper] = useState(null);
+  const [swipe, setSwiper] = useState(false);
 
   const slideshow = useSwiper();
 
@@ -27,7 +27,6 @@ export default function Slideshow({slice}) {
 
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
-  console.log(slice);
 
   const slides =   items.map((slide, index) => {
           if(isTabletOrMobile){
@@ -35,7 +34,7 @@ export default function Slideshow({slice}) {
                 <SwiperSlide key={index}>
                     <div className="image-container mobile_cont">
                         {slide.SlideMobile.url ? (  <img src={slide.SlideMobile.url} layout="intrinsic"/>) : (
-                          <video src={slide.videoMobile.url}  width="100%" height="100%" autoPlay muted playsInline />
+                          <video src={slide.videoMobile.url}  width="100%" height="100%" autoPlay muted playsInline loop />
                         )}
                         {prismicH.isFilled.richText(slide.slideCaption) && (
                         <div className="slide-caption">
@@ -50,7 +49,7 @@ export default function Slideshow({slice}) {
                 <SwiperSlide key={index}>
                     <div className="image-container dekst_cont">
                       {slide.slide.url ? (  <img src={slide.slide.url} layout="intrinsic"/>) : (
-                        <video src={slide.video.url}  width="100%" height="100%" autoPlay muted playsInline />
+                        <video src={slide.video.url}  width="100%" height="100%" autoPlay muted playsInline loop/>
                       )}
                       {prismicH.isFilled.richText(slide.slideCaption) && (
                       <div className="slide-caption">
@@ -66,15 +65,17 @@ export default function Slideshow({slice}) {
       )
 
   return (
-    <div className="swiper__container">
+    <div className={swipe ? ("swiper__container visible"): ("swiper__container")}>
     <Swiper
        modules={[Navigation, A11y, EffectFade]}
        slidesPerView={1}
        navigation
        pagination={{ clickable: true }}
        effect='fade'
+       fade={{ crossFade: true }}
        speed={600}
        loop
+       onSwiper={() => setSwiper(true)}
      >
 
       {slides}

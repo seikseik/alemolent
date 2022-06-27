@@ -10,7 +10,8 @@ header{
 }
 
 .header__wrapper{
-  padding: 20px;
+  padding: 0 20px;
+  height: 80px;
   display: flex;
   align-items: center;
   mix-blend-mode: difference;
@@ -24,6 +25,13 @@ header{
 
 .header__description{
   width:42%;
+  p{
+    transition: .4s ease;
+  }
+  .hide{
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 .mobile{

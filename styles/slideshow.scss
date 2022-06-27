@@ -1,10 +1,18 @@
 
+.swiper__container{
+  opacity: 0;
+  transition: opacity .4s ease;
+  &.visible{
+    opacity: 1;
+  }
+}
 
 .swiper{
   width:100%;
   height: 100vh;
   .swiper-slide{
-
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
     img, video{
       width:100%;
       height: 100%;

@@ -8,7 +8,7 @@ import Sidepanel from "../components/sidepanel";
 import AboutSection from "../components/about-section";
 import { createClient } from '../prismicio'
 
-import {useState, useEffect } from 'react'
+import {useState, useEffect, useRef } from 'react'
 
 export default function Home({page, about}) {
 
@@ -18,9 +18,18 @@ export default function Home({page, about}) {
   const {headerDescription} = page.data;
 
   const [open, setOpen] = useState(false);
+  const HeadDesc = useRef();
 
   const toggleAbout = () =>{
+    if(open){
+      setTimeout(function(){
+        HeadDesc.current.classList.remove("hide");
+      }, 150)
+    }else{
+      HeadDesc.current.classList.add("hide");
+    }
     setOpen(!open)
+
   }
 
   const loadTypeKit = `
@@ -44,7 +53,7 @@ export default function Home({page, about}) {
         <script dangerouslySetInnerHTML={{__html: loadTypeKit}} />
       </Head>
 
-      <Header description={headerDescription} open={open} toggleAbout={toggleAbout}/>
+      <Header description={headerDescription} open={open} toggleAbout={toggleAbout}  forwardedRef={HeadDesc}/>
           <Sidepanel open={open}>
             <AboutSection description={aboutDescription} about={info}/>
           </Sidepanel>
