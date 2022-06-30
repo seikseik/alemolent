@@ -58,7 +58,7 @@
 
 .slide-caption{
   position: absolute;
-  bottom:40px;
+  bottom:20px;
   height: 80px;
   display: flex;
   flex-direction: column;
@@ -75,6 +75,6 @@
     min-height: -webkit-fill-available;
   }
   .slide-caption{
-    bottom:20px;
+    bottom: calc(20px + env(safe-area-inset-bottom));
   }
 }
