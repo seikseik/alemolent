@@ -15,6 +15,8 @@ export default function Home({page, about}) {
   const { aboutDescription } = about.data;
   const info = about.data;
 
+  const { description, metaImage, pageTitle } = page.data;
+
   const {headerDescription} = page.data;
 
   const [open, setOpen] = useState(false);
@@ -46,9 +48,21 @@ export default function Home({page, about}) {
   return (
     <Fragment>
       <Head>
-        <title>Alessandro Molent</title>
-        <meta name="title" content="Alessandro Molent" />
-        <meta name="description" content="Multidisciplinary graphic designer and art director based in London, United Kingdom." />
+        <title>{pageTitle}</title>
+        <meta name="title" content={pageTitle} />
+        <meta name="description" content={description} />
+
+       <meta itempropr="og:type" content="website" />
+       <meta itempropr="og:title" content={pageTitle} />
+       <meta itempropr="og:description" content={description} />
+       <meta itempropr="og:image" content={metaImage.url} />
+
+       <meta itempropr="twitter:card" content="summary_large_image" />
+       <meta itempropr="twitter:title" content={pageTitle} />
+       <meta itempropr="twitter:description" content={description} / >
+       <meta itempropr="twitter:image" content={metaImage.url} />
+
+
         <link rel="icon" href="/favicon.ico" />
         <script dangerouslySetInnerHTML={{__html: loadTypeKit}} />
       </Head>

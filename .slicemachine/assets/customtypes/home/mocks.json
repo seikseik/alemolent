@@ -1,8 +1,19 @@
 {
-  "id": "bc922eed-a385-4adf-b8e7-0b400b1644e2",
-  "uid": "modi-facere-voluptas",
+  "id": "f75bc658-c8ef-481f-8366-09dcc2d6c391",
+  "uid": "et-quia-ducimus",
   "type": "home",
   "data": {
-    "headerDescription": "unleash leading-edge bandwidth"
+    "headerDescription": "unleash web-enabled networks",
+    "pageTitle": "transition innovative solutions",
+    "description": "syndicate B2B applications",
+    "metaImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=500&fit=crop"
+    }
   }
 }
