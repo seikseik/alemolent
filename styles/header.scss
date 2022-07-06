@@ -10,10 +10,10 @@ header{
 }
 
 .header__wrapper{
-  padding: 0 20px;
+  padding: 20px;
   height: 80px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   mix-blend-mode: difference;
   .header__logo{
     width:25%;
